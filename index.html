@@ -52,8 +52,14 @@ header {
     height:70px ;
     z-index:999;
     transition: .4s;
+    display: flex;
+  align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
 } 
+
+.logo-header {
+  width: 50px;
+}
 
 /*    menu produk      */
 /* .container {
@@ -66,9 +72,19 @@ header {
     border-bottom: 2px solid black; 
 } */
 
+/* .scroll-container {
+      margin-top:10vh  ;
+      overflow-x: scroll;
+      white-space: nowrap;
+      width: 100%;
+      margin-left:5px ;
+      display: flex;
+} */
+
 .gallery-container {
     width: 100%;
     overflow: hidden;
+    padding-bottom: 5rem;
 }
 
 .gallery {
@@ -80,7 +96,8 @@ header {
     white-space: nowrap; /* Make sure images stay on the same line */
     overflow-x: auto; /* Enable horizontal scrolling */
     /* border: 1px solid #ccc; Add a border for visual clarity */
-  
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery img {
@@ -159,12 +176,16 @@ header {
 
 .product {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     background: #A29292FF;
-    height: 70vh;
+    height: 90vh;
     color: #fff;
     gap: 1rem;
+    border-radius: 25px;
+    margin-bottom: 5rem;
 }
 
 .product-image {
@@ -173,7 +194,7 @@ header {
     width: 20rem;
 }
 
-.product .title {
+.product-title {
     font-size: 3rem;
     text-transform: uppercase;
 }
@@ -248,20 +269,16 @@ header {
 }
 
 /* Footer */
-footer {
-    background-color: #333;
+/* footer {
     color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-content {
-    max-width: 1200px;
+   width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #333;
 }
 
 .footer-section,
@@ -283,6 +300,188 @@ footer {
 
 .footer-links a:hover {
     color: blue;
+} */
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
 }
 
 /* Media query for smaller screens */
@@ -290,8 +489,16 @@ footer {
     .down-arrow {
         width: 5rem;
     }
+    .title-product {
+      justify-content: start;
+      align-items: start;
+    }
+    
     .combined:nth-child(1) {
         margin-left: 500px;
+    }
+    .combined:nth-child(2) {
+      padding-left: 10px;
     }
     .title-product {
         margin: 2rem 0;
@@ -299,9 +506,9 @@ footer {
     }
     .product {
         margin-top: 0;
-        height: 70vh;
+        height: 90vh;
     }
-    .product .title {
+    .product-title {
         font-size: 1.5rem;  
         text-align: center;    
     }
@@ -315,7 +522,7 @@ footer {
         gap: 1rem;
     }
     /* Footer */
-    .footer-content {
+    /* .footer-content {
         flex-direction: column;
         gap: 1rem;
     }
@@ -323,12 +530,26 @@ footer {
     .footer-section,
     .footer-links {
         text-align: center;
-    }
+    } */
 }
   </style>
   <body>
-    <header></header>
+    <header>
+      <img src="/images//IMG-20231018-WA0002.jpg" alt="Logo" class="logo-header">
+    </header>
     <section class="container">
+      <!-- <div class="scroll-container">
+        <div class="product">    
+        <img src="image/1.png">
+          <h2 class="discount"> Rp95.000</h2>
+       <h3 class="nameharga"> Rp 100.000</h3>   <button class="product-button">Beli Sekarang</button>
+        </div>
+        <div class="product">
+        <img src="image/1.png" >
+          <h2 class="discount"> Rp95.000</h2>
+       <h3 class="nameharga"> Rp 100.000</h3>   <button class="product-button">Beli Sekarang</button>
+        </div> 
+     </div> -->
       <div class="gallery-container">
         <div class="gallery">
           <main class="title-product">
@@ -386,6 +607,7 @@ footer {
         </div>
       </div>
       <main class="product">
+        <h3 class="product-title">Jastip Internasional</h3>
         <img src="/images/middle-bg.jpeg" alt="middle-image" class="product-image" />
       </main>
       <main class="product-card">
@@ -432,7 +654,49 @@ footer {
           </a>
         </button>
       </main>
-      <footer>
+  
+<footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Your<span>logo</span></h3>
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Pricing</a>
+          <a href="#">About</a>  
+          <a href="#">Faq</a>
+          <a href="#">Contact</a>
+        </p>
+        <p class="footer-company-name">Company Name © 2015</p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Jl .............</span>Bogor</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0893877326782672316</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">Your company email</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <!-- <a href="#"><i class="fas fa-github"></i></a> -->
+        </div>
+      </div>
+    </footer>
+      <!-- <footer>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#333" fill-opacity="1" d="M0,192L80,197.3C160,203,320,213,480,197.3C640,181,800,139,960,144C1120,149,1280,203,1360,229.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
         <div class="footer-content">
             <div class="footer-section">
                 <h2>About Us</h2>
@@ -446,7 +710,7 @@ footer {
                 <a href="#">Instagram</a>
             </div>
         </div>
-      </footer>
+      </footer> -->
     </section>
 
     <script>
